@@ -1,7 +1,8 @@
 name "confluence"
 description "confluence role"
 run_list(
-	"recipe[mysql::server]"
+	"recipe[mysql::server]",
+	"recipe[confluence]"
 )
 default_attributes "mysql" => {
 	"server_debian_password" => "confluence",
